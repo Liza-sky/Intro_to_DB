@@ -3,6 +3,7 @@ import mysql.connector
 sql = "CREATE DATABASE IF NOT EXISTS alx_book_store";
 mycursor.execute(sql)
 
+
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -12,9 +13,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sql = "CREATE DATABASE IF NOT EXISTS alx_book_store";
-mycursor.execute(sql)
-
+USE alx_book_store;
+mycursor.execute("USE alx_book_store")
 
 
 sql = """
