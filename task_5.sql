@@ -13,5 +13,9 @@ import mysql.connector
 USE alx_book_store;
 mycursor.execute("USE alx_book_store")
 
-INSERT INTO Customer (customer_id, customer_name, email, address)
-VALUES (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.');
+
+sql = "INSERT INTO Customer (customer_id, customer_name, email, address)"
+val = (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.');
+mycursor.execute(sql, val)
+mydb.commit()  # Commit the changes
+
