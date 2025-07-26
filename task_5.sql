@@ -16,17 +16,5 @@ mycursor.execute("USE alx_book_store")
 
  "INSERT INTO Customer (customer_id, customer_name, email, address) VALUES (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.')"
 mycursor.execute(sql)
-
-
 mydb.commit()
- print("Customer inserted successfully.")
-
-except mysql.connector.Error as err:
-    print(f"Error: {err}")
-
-finally:
-    if 'mycursor' in locals():
-        mycursor.close()
-    if 'mydb' in locals() and mydb.is_connected():
-        mydb.close()
-
+ 
