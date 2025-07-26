@@ -1,6 +1,6 @@
 import mysql.connector
 
-
+try:
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -9,6 +9,9 @@ import mysql.connector
 )
 
     mycursor = mydb.cursor()
+
+USE alx_book_store;
+mycursor.execute("USE alx_book_store")
 
 
 sql = "INSERT INTO Customer (customer_id, customer_name, email, address) VALUES (%s, %s, %s, %s)"
